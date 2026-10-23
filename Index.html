@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0f5">
+<title>Happy Birthday, Bachhaw! 🧸💗</title>
+<style>
+:root{--pink:#ff79a9;--rose:#e94f88;--cream:#fff8f0;--ink:#61384c;--lilac:#d9c5ff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,sans-serif;overflow-x:hidden}
+button,input{font:inherit}
+button{cursor:pointer;border:0}
+.screen{min-height:100svh;display:grid;place-items:center;padding:24px;position:relative;overflow:hidden}
+#opening{background:radial-gradient(circle at 50% 20%,#fff 0,#fff0f6 48%,#ffe2ed 100%)}
+.floaties{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.floaty{position:absolute;bottom:-40px;opacity:.55;animation:rise linear infinite;font-size:clamp(18px,3vw,30px)}
+@keyframes rise{to{transform:translateY(-115vh) rotate(30deg);opacity:0}}
+.open-card{position:relative;z-index:1;text-align:center;width:min(100%,540px);padding:30px 22px 34px;background:#ffffffd9;border:2px solid #fff;border-radius:32px;box-shadow:0 18px 55px #df7ea52b}
+.eyebrow{letter-spacing:.16em;text-transform:uppercase;font-size:.75rem;font-weight:800;color:var(--rose)}
+.bears{display:flex;justify-content:center;gap:16px;margin:12px auto 10px}
+.bear{font-size:clamp(76px,18vw,112px);filter:drop-shadow(0 9px 5px #b55c7b22);animation:bob 1.7s ease-in-out infinite}
+.bear:nth-child(2){animation-delay:.35s}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-13px) rotate(4deg)}}
+h1{font-family:Georgia,serif;font-size:clamp(2.2rem,8vw,3.8rem);line-height:1.04;margin:14px 0;color:#d94782}
+.sub{font-size:1.02rem;line-height:1.65;max-width:390px;margin:0 auto 22px}
+.pill{border-radius:999px;padding:13px 22px;background:var(--rose);color:white;font-weight:800;box-shadow:0 8px 18px #e94f8838;transition:transform .2s}
+.pill:hover{transform:translateY(-2px) scale(1.02)}
+.small{font-size:.84rem;opacity:.8;margin-top:13px}
+#birthday{display:none;background:linear-gradient(150deg,#fff8f0,#ffe6f0 48%,#f3eaff)}
+.content{width:min(100%,850px);text-align:center;position:relative;z-index:1}
+.ribbon{display:inline-block;background:#fff;border:1px solid #ffd0e1;border-radius:999px;padding:8px 14px;color:#d94782;font-size:.85rem;font-weight:800}
+.message{font-family:Georgia,serif;font-size:clamp(1.12rem,3.5vw,1.45rem);line-height:1.75;max-width:700px;margin:20px auto}
+.section{padding:70px 22px;text-align:center;background:#fffaf7}
+.section.alt{background:#fff0f6}
+.section h2{font-family:Georgia,serif;color:#d94782;font-size:clamp(1.9rem,6vw,2.7rem);margin:0 0 12px}
+.section p{line-height:1.7;max-width:650px;margin:0 auto 22px}
+.gifts{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:14px;max-width:720px;margin:25px auto}
+.gift{background:white;border:1px solid #ffe0eb;border-radius:22px;padding:22px 12px;box-shadow:0 8px 22px #8f4c6510}
+.gift .emoji{font-size:2.5rem;display:block;margin-bottom:8px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;max-width:760px;margin:22px auto}
+.photo{aspect-ratio:1/1;border:2px dashed #f3a6c4;border-radius:20px;background:#fff;display:grid;place-items:center;overflow:hidden;color:#b85d80;padding:8px;position:relative}
+.photo img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.photo span{font-size:2rem}
+.photo small{display:block;font-size:.8rem}
+input[type=file]{max-width:220px;font-size:.85rem;margin:10px auto}
+#letter{max-width:680px;margin:25px auto;padding:26px;background:#fff;border:1px solid #ffd7e5;border-radius:24px;line-height:1.8;text-align:left;box-shadow:0 10px 30px #9a55751a}
+.qr-wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:22px;max-width:680px;margin:25px auto}
+.qr-heart{width:170px;height:170px;background:#fff;border:1px solid #ffd2e2;border-radius:25px;display:grid;place-items:center;box-shadow:0 8px 24px #c55e8620;overflow:hidden}
+.qr-heart img{width:150px;height:150px;object-fit:contain}
+.qr-heart .heart{font-size:5rem;color:#ef6598;line-height:1}
+.qr-tools{max-width:360px;text-align:left}
+.qr-tools input{width:100%;padding:12px;border:1px solid #e7b6ca;border-radius:12px;background:#fff;margin:8px 0}
+footer{padding:35px 18px;text-align:center;background:#fce0eb;color:#8c4b67}
+.hidden{display:none!important}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#61384c;color:#fff;padding:12px 18px;border-radius:999px;z-index:9;box-shadow:0 8px 25px #0002;max-width:90vw;text-align:center}
+.confetti{position:fixed;top:-20px;z-index:10;pointer-events:none;animation:fall 3.4s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(700deg);opacity:.1}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="floaties" id="floaties" aria-hidden="true"></div>
+<section class="screen" id="opening">
+  <div class="open-card">
+    <div class="eyebrow">a tiny surprise, just for you</div>
+    <div class="bears" aria-label="Two dancing teddy bears"><span class="bear">🧸</span><span class="bear">🧸</span></div>
+    <h1>Hey, Bachhaw! 💗</h1>
+    <p class="sub">Two little teddy bears have brought you something special. Ready to open your birthday surprise?</p>
+    <button class="pill" id="openBtn">Open your surprise ✨</button>
+    <div class="small">Made with lots of love ♡</div>
+  </div>
+</section>
+
+<main id="birthday">
+  <section class="screen">
+    <div class="content">
+      <div class="ribbon">🎂 TODAY IS ALL ABOUT YOU 🎂</div>
+      <div class="bears"><span class="bear">🧸</span><span class="bear">🧸</span></div>
+      <h1>Happy Birthday,<br>Bachhaw! 🎀</h1>
+      <p class="message">I hope your day is full of smiles, little surprises, warm hugs, and all the happiness your heart can hold. You deserve so many beautiful things—not just today, but every day. 💗</p>
+      <button class="pill" id="wishBtn">Make a birthday wish 🌟</button>
+      <p class="small">Psst… your wish is between you and the stars.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>A little box of happiness 🎁</h2>
+    <p>Open each little gift for a birthday reminder.</p>
+    <div class="gifts">
+      <button class="gift" data-gift="May your year be full of laughter, peace, and lovely surprises. 💗"><span class="emoji">🎀</span><b>Gift of joy</b></button>
+      <button class="gift" data-gift="You matter more than you know. Keep being wonderfully you. 🌷"><span class="emoji">🌷</span><b>Gift of love</b></button>
+      <button class="gift" data-gift="May the dreams you keep close to your heart find their way to you. ✨"><span class="emoji">🌙</span><b>Gift of dreams</b></button>
+    </div>
+    <div id="giftMessage" class="message" aria-live="polite"></div>
+  </section>
+
+  <section class="section alt">
+    <h2>Our little memory corner 📸</h2>
+    <p>Add your own photos from your phone. They stay in this page while it is open; choose the photos again if you reopen the file.</p>
+    <input id="photoInput" type="file" accept="image/*" multiple aria-label="Choose birthday photos">
+    <div class="gallery" id="gallery">
+      <div class="photo"><span>🖼️<small>Add your favourite memories above</small></span></div>
+      <div class="photo"><span>💞<small>Little moments, big memories</small></span></div>
+      <div class="photo"><span>🌸<small>Keep smiling, birthday star</small></span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>A letter for you 💌</h2>
+    <div id="letter">Dear Bachhaw,<br><br>Happy birthday to you! 🥹❤️ I hope this new chapter brings you peace, good people, sweet memories, and a hundred reasons to smile. Never forget that you deserve kindness, respect, and happiness. May your wishes slowly turn into beautiful realities, and may even your ordinary days feel a little magical.<br><br>Keep that lovely spark in you alive. Enjoy your day, eat something yummy, take lots of pictures, and let yourself feel celebrated. Sending you the biggest birthday hug! 🧸🎂<br><br>With lots of love,<br>Your birthday-surprise maker ♡</div>
+    <button class="pill" id="copyLetter">Copy the birthday letter 💌</button>
+  </section>
+
+  <section class="section alt">
+    <h2>Make a heart QR code 💗</h2>
+    <p>After publishing this page, paste its public link below to make a QR image you can share. The QR image uses an online QR service, so internet is needed for this part.</p>
+    <div class="qr-wrap">
+      <div class="qr-heart" id="qrBox"><div class="heart">♥</div></div>
+      <div class="qr-tools">
+        <label for="siteUrl"><b>Your published website link</b></label>
+        <input id="siteUrl" type="url" placeholder="https://your-birthday-site.example" autocomplete="url">
+        <button class="pill" id="makeQr">Create my QR ✨</button>
+        <p class="small">Tip: publish the HTML first, then paste the final link here. A QR code cannot point to a file that only exists on your phone.</p>
+      </div>
+    </div>
+  </section>
+  <footer>Made with 💗, teddy bears 🧸🧸, and birthday magic.<br>Happy Birthday, Bachhaw! 🎂</footer>
+</main>
+<div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+<script>
+const $ = s => document.querySelector(s);
+const toast = (msg) => {
+  const t = $('#toast'); t.textContent = msg; t.classList.remove('hidden');
+  clearTimeout(window.toastTimer); window.toastTimer = setTimeout(()=>t.classList.add('hidden'),2800);
+};
+function confetti(){
+  const pieces=['💗','💕','✨','🌸','🎉','⭐'];
+  for(let i=0;i<36;i++){
+    const el=document.createElement('span'); el.className='confetti';
+    el.textContent=pieces[Math.floor(Math.random()*pieces.length)];
+    el.style.left=Math.random()*100+'vw'; el.style.fontSize=(14+Math.random()*18)+'px';
+    el.style.animationDelay=(Math.random()*.8)+'s'; document.body.appendChild(el);
+    setTimeout(()=>el.remove(),4300);
+  }
+}
+const floaties=$('#floaties');
+['💗','♡','✨','🌸','💕'].forEach((emoji,i)=>{
+  for(let j=0;j<3;j++){const el=document.createElement('span');el.className='floaty';el.textContent=emoji;
+    el.style.left=(Math.random()*100)+'%';el.style.animationDuration=(9+Math.random()*12)+'s';
+    el.style.animationDelay=(-Math.random()*16)+'s';floaties.appendChild(el);}
+});
+$('#openBtn').addEventListener('click',()=>{
+  $('#opening').style.display='none';$('#birthday').style.display='block';confetti();
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+$('#wishBtn').addEventListener('click',()=>{confetti();toast('Close your eyes, make a wish, and blow out an imaginary candle! 🕯️💗');});
+document.querySelectorAll('[data-gift]').forEach(btn=>btn.addEventListener('click',()=>{
+  $('#giftMessage').textContent=btn.dataset.gift;confetti();
+}));
+$('#photoInput').addEventListener('change',e=>{
+  const files=[...e.target.files].filter(f=>f.type.startsWith('image/')).slice(0,12);
+  if(!files.length)return;
+  $('#gallery').innerHTML='';
+  files.forEach(file=>{
+    const card=document.createElement('div');card.className='photo';
+    const img=document.createElement('img');img.alt=file.name;img.src=URL.createObjectURL(file);card.appendChild(img);$('#gallery').appendChild(card);
+  });
+});
+$('#copyLetter').addEventListener('click',async()=>{
+  const text=$('#letter').innerText;
+  try{await navigator.clipboard.writeText(text);toast('Birthday letter copied! 💌');}
+  catch(e){const area=document.createElement('textarea');area.value=text;document.body.appendChild(area);area.select();document.execCommand('copy');area.remove();toast('Birthday letter copied! 💌');}
+});
+$('#makeQr').addEventListener('click',()=>{
+  const url=$('#siteUrl').value.trim();
+  if(!/^https?:\/\/.+/i.test(url)){toast('Paste your full published link starting with https://');return;}
+  const img=document.createElement('img');img.alt='QR code for your birthday website';
+  img.src='https://api.qrserver.com/v1/create-qr-code/?size=300x300&data='+encodeURIComponent(url);
+  img.onerror=()=>toast('Could not load the QR image. Check your internet and try again.');
+  $('#qrBox').innerHTML='';$('#qrBox').appendChild(img);
+});
+</script>
+</body>
+</html>
